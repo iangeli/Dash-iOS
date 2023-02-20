@@ -328,11 +328,6 @@
     }
 }
 
-- (IBAction)getDashForMacOS:(id)sender
-{
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://kapeli.com/dash"]];
-}
-
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];

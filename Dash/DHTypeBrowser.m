@@ -32,6 +32,7 @@
     UITableViewController *tableViewController = [UITableViewController new];
     self.searchController = [[UISearchController alloc] initWithSearchResultsController: tableViewController];
     self.searchResultTableView = tableViewController.tableView;
+    self.searchResultTableView.backgroundColor = [UIColor tertiarySystemBackgroundColor];
     [super viewDidLoad];
     self.clearsSelectionOnViewWillAppear = NO;
     self.dbSearchController = [DHDBSearchController searchControllerWithDocsets:@[self.docset] typeLimit:nil viewController:self];
@@ -43,6 +44,8 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"DHLoadingCell" bundle:nil] forCellReuseIdentifier:@"DHLoadingCell"];
 
     self.tableView.rowHeight = 44;
+    self.tableView.backgroundColor = [UIColor tertiarySystemBackgroundColor];
+    
     self.title = self.docset.name;
     [self enforceSmartTitleBarButton];
     if(self.isRestoring)

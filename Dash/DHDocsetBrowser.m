@@ -50,12 +50,14 @@ static NSAttributedString *_titleBarItemAttributedStringTemplate = nil;
     UITableViewController *tableViewController = [UITableViewController new];
     self.searchController = [[UISearchController alloc] initWithSearchResultsController: tableViewController];
     self.searchResultTableView = tableViewController.tableView;
+    self.searchResultTableView.backgroundColor = [UIColor tertiarySystemBackgroundColor];
     
     self.viewModel = [[DHDocsetBrowserViewModel alloc] init];
     self.clearsSelectionOnViewWillAppear = NO;
     self.dbSearchController = [DHDBSearchController searchControllerWithDocsets:nil typeLimit:nil viewController:self];
     self.navigationItem.searchController = self.searchController;
     [self.tableView registerNib:[UINib nibWithNibName:@"DHBrowserCell" bundle:nil] forCellReuseIdentifier:@"DHBrowserCell"];
+    self.tableView.backgroundColor = [UIColor tertiarySystemBackgroundColor];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reload:) name:DHDocsetsChangedNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reload:) name:DHRemotesChangedNotification object:nil];

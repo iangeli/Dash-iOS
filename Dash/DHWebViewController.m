@@ -44,6 +44,7 @@ static id singleton = nil;
         return;
     }
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor systemBackgroundColor];
     if(self.didLoadOnce)
     {
         return;

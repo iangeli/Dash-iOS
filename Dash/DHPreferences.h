@@ -26,7 +26,6 @@
 @property (assign) BOOL didSetUpdateLabelBefore;
 
 - (IBAction)updatesSwitchValueChanged:(id)sender;
-- (IBAction)getDashForMacOS:(id)sender;
 - (NSString *)segueIdentifierForIndexPath:(NSIndexPath *)indexPath;
 
 @end
