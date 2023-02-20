@@ -1,5 +1,5 @@
 project 'Dash/Dash iOS.xcodeproj'
-platform :ios, "9.0"
+platform :ios, "13.0"
 inhibit_all_warnings!
 
 target "Dash" do
@@ -24,9 +24,8 @@ target "Dash" do
     pod 'SAMKeychain'
     pod 'NSTimer-Blocks'
     pod 'GZIP'
-    target "Dash App Store" do
-        pod 'HockeySDK'
-    end
+    pod 'Masonry'
+    pod 'SnapKit'
 end
 
 post_install do | installer |
